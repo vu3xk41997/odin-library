@@ -3,24 +3,24 @@
        "title":"The Great Gatsby",
        "author":"F. Scott Fitzgerald",
        "pages":218,
-       "read":true
+       "is_read":true
     },
     {
        "title":"To Kill a Mockingbird",
        "author":"Harper Lee",
        "pages":281,
-       "read":true
+       "is_read":true
     },
     {
        "title":"Nineteen Eighty-Four",
        "author":"George Orwell",
        "pages":328,
-       "read":false
+       "is_read":false
     },
     {
        "title":"One Hundred Years of Solitude",
        "author":"Gabriel García Márquez",
        "pages":417,
-       "read":false
+       "is_read":false
     }
  ]

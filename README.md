@@ -1,8 +1,16 @@
 # odin-library
 Javascript Project focusing on objects
 
-## run html on browser using python3
-1. to avoid error with importing JSON to js file
-2. $ cd ~/odin_repos/odin-library <br/>
-3. $ python3 -m http.server
-4. open http://localhost:8000/index.html in browser
+## Requirement
+* Display each book from existing array (myLibrary)
+* Use form to manually add new books and display it
+* Allow book object to be deleted
+* Allow read status to be changed
+
+## Process
+1. Implement html, css, javascript skeleton
+2. Create Books contructor and add showBooks()
+3. Implement html and css for "add book" form
+4. Cretate addBookToLibrary() using elements in form
+5. Add event listener for submitting the form
+6. New added book will be displayed with appendBook()
