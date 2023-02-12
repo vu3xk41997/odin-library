@@ -34,6 +34,12 @@ function closeForm() {
     document.getElementById("myForm").style.display = "none";
 }
 
+window.onclick = function(event) {
+    if (event.target == document.getElementById("myForm")) {
+        document.getElementById("myForm").style.display = "none";
+    }
+  }
+
 // display books in table
 function showBooks() {
     let table = document.getElementsByClassName('book-table')[0];
@@ -44,8 +50,8 @@ function showBooks() {
                 <td>${currentBook.title}</td>
                 <td>${currentBook.author}</td>
                 <td>${currentBook.pages}</td>
-                <td>${currentBook.is_read}</td>
-                <td></td>
+                <td><button class="status-button" id="status${i}" onclick="changeStatus(${i})">${currentBook.is_read}</button></td>
+                <td><button class="delete-button" id="delete${i}" onclick="deleteBook(${i})">Delete</button></td>
             </tr>
         `);
     };
@@ -70,10 +76,26 @@ function appendBook() {
             <td>${currentBook.title}</td>
             <td>${currentBook.author}</td>
             <td>${currentBook.pages}</td>
-            <td>${currentBook.is_read}</td>
-            <td></td>
+            <td><button class="status-button" id="status${myLibrary.length-1}" onclick="changeStatus(${myLibrary.length-1})">${currentBook.is_read}</button></td>
+            <td><button class="delete-button" id="delete${myLibrary.length-1}" onclick="deleteBook(${myLibrary.length-1})">Delete</button></td>
         </tr>
     `);
+}
+
+// button for delete certain book
+function deleteBook(bookIndex) {
+    myLibrary.splice(bookIndex, 1);
+    document.getElementById(`delete${bookIndex}`).parentElement.parentElement.remove();
+}
+
+// button for change read status
+function changeStatus(bookIndex) {
+    if (myLibrary[bookIndex].is_read == "Not read") {
+        myLibrary[bookIndex].is_read = "Read"
+    } else {
+        myLibrary[bookIndex].is_read = "Not read"
+    }
+    document.getElementById(`status${bookIndex}`).innerText = myLibrary[bookIndex].is_read
 }
 
 // clear form after new book object is created
