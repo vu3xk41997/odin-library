@@ -2,7 +2,7 @@
 Javascript Project focusing on objects
 
 ## Live Demo
-[Live Demo] (https://vu3xk41997.github.io/odin-library/)
+[Live Demo](https://vu3xk41997.github.io/odin-library/)
 
 ## Requirement
 * Display each book from existing array (myLibrary)
