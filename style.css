@@ -50,9 +50,11 @@ table {
 /* CSS reset */
 
 .main {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   text-align: center;
+  justify-content: space-between;
   font-family:'Times New Roman', Times, serif;
 }
 
@@ -219,4 +221,13 @@ td {
 
 .delete-button:hover {
   opacity: 1;
+}
+
+
+.footer {
+  background-color:#1f2937;
+  color: #f9faf8;
+  font-size: 14px;
+  padding: 24px;
+  text-align: center;
 }

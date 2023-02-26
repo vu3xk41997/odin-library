@@ -60,12 +60,20 @@ function showBooks() {
 window.onload = showBooks();
 
 // Book contructor
-function Book(title, author, pages, is_read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.is_read = is_read;
+class Book{
+    constructor(title, author, pages, is_read){
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.is_read = is_read;
+    }
 }
+// function Book(title, author, pages, is_read) {
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.is_read = is_read;
+// }
 
 // display new object to table
 function appendBook() {
